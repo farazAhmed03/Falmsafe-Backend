@@ -52,6 +52,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Clinical Records Routes
     Route::prefix('clinical-records')->group(function () {
+        Route::get('/', [ClinicalRecordController::class, 'index']);
         Route::post('/', [ClinicalRecordController::class, 'store']);
         Route::get('/{appointment_id}', [ClinicalRecordController::class, 'show']);
         Route::put('/{id}', [ClinicalRecordController::class, 'update']);

@@ -18,7 +18,7 @@ class AuthController extends Controller
                 'first_name' => 'required|string|max:255',
                 'last_name' => 'required|string|max:255',
                 'email' => 'required|email|unique:users',
-                'password' => 'required|min:8|confirmed',
+                'password' => 'required|min:3',
                 'role' => 'required|in:doctor,patient',
                 'terms' => 'required|accepted'
             ]);
